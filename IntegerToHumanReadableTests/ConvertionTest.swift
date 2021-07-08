@@ -1,14 +1,13 @@
 //
-//  IntegerToHumanReadableTests.swift
+//  ConvertionTest.swift
 //  IntegerToHumanReadableTests
 //
-//  Created by Salzer on 07/07/21.
+//  Created by Salzer on 08/07/21.
 //
 
 import XCTest
-@testable import IntegerToHumanReadable
 
-class IntegerToHumanReadableTests: XCTestCase {
+class ConvertionTest: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
