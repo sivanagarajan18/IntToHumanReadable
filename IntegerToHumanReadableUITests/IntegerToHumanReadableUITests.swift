@@ -26,17 +26,24 @@ class IntegerToHumanReadableUITests: XCTestCase {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
+        
+        let onlyIntegersPleaseTextField = app.textFields["Only Integers please"]
+        onlyIntegersPleaseTextField.tap()
+        XCTAssertEqual(app.textFields.count, 1)
+                XCTAssertEqual(app.buttons.count, 1)
+        onlyIntegersPleaseTextField.tap()
+        onlyIntegersPleaseTextField.tap()
+        
+        let key = app/*@START_MENU_TOKEN@*/.keys["5"]/*[[".keyboards.keys[\"5\"]",".keys[\"5\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        key.tap()
+        key.tap()
+        key.tap()
+        let key2 = app/*@START_MENU_TOKEN@*/.keys["2"]/*[[".keyboards.keys[\"2\"]",".keys[\"2\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        key2.tap()
+        key2.tap()
+        app/*@START_MENU_TOKEN@*/.keys["9"]/*[[".keyboards.keys[\"9\"]",".keys[\"9\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        
+        XCUIApplication()/*@START_MENU_TOKEN@*/.staticTexts["Convert"]/*[[".buttons[\"Convert\"].staticTexts[\"Convert\"]",".staticTexts[\"Convert\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        
     }
 }
