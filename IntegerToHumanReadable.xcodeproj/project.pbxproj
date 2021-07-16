@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9781D7B326A185B700EADE2E /* IntToHumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9781D7B226A185B700EADE2E /* IntToHumModel.swift */; };
 		D00C16352696DD090056D992 /* ConvertionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C16342696DD090056D992 /* ConvertionTest.swift */; };
 		D0461B9826961F0400D0B389 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0461B9726961F0400D0B389 /* AppDelegate.swift */; };
 		D0461B9A26961F0400D0B389 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0461B9926961F0400D0B389 /* SceneDelegate.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9781D7B226A185B700EADE2E /* IntToHumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntToHumModel.swift; sourceTree = "<group>"; };
 		D00C16342696DD090056D992 /* ConvertionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertionTest.swift; sourceTree = "<group>"; };
 		D0461B9426961F0400D0B389 /* IntegerToHumanReadable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntegerToHumanReadable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0461B9726961F0400D0B389 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9781D7AD26A1852600EADE2E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D09FCA3E269622090033D7C0 /* IntToHumViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9781D7AE26A1853700EADE2E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9781D7B226A185B700EADE2E /* IntToHumModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9781D7AF26A1854000EADE2E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D0461B9B26961F0400D0B389 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9781D7B026A1854D00EADE2E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D0461BA026961F2800D0B389 /* Assets.xcassets */,
+				D0461BA526961F2800D0B389 /* Info.plist */,
+				D0461B9726961F0400D0B389 /* AppDelegate.swift */,
+				D0461B9926961F0400D0B389 /* SceneDelegate.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		9781D7B126A1855F00EADE2E /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				D0461BA226961F2800D0B389 /* LaunchScreen.storyboard */,
+				D0461B9D26961F0400D0B389 /* Main.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
 		D0461B8B26961F0300D0B389 = {
 			isa = PBXGroup;
 			children = (
@@ -101,14 +147,11 @@
 		D0461B9626961F0400D0B389 /* IntegerToHumanReadable */ = {
 			isa = PBXGroup;
 			children = (
-				D0461B9726961F0400D0B389 /* AppDelegate.swift */,
-				D0461B9926961F0400D0B389 /* SceneDelegate.swift */,
-				D0461B9B26961F0400D0B389 /* ViewController.swift */,
-				D09FCA3E269622090033D7C0 /* IntToHumViewModel.swift */,
-				D0461B9D26961F0400D0B389 /* Main.storyboard */,
-				D0461BA026961F2800D0B389 /* Assets.xcassets */,
-				D0461BA226961F2800D0B389 /* LaunchScreen.storyboard */,
-				D0461BA526961F2800D0B389 /* Info.plist */,
+				9781D7B126A1855F00EADE2E /* StoryBoard */,
+				9781D7B026A1854D00EADE2E /* Common */,
+				9781D7AF26A1854000EADE2E /* Controller */,
+				9781D7AE26A1853700EADE2E /* Model */,
+				9781D7AD26A1852600EADE2E /* ViewModel */,
 			);
 			path = IntegerToHumanReadable;
 			sourceTree = "<group>";
@@ -263,6 +306,7 @@
 			files = (
 				D0461B9C26961F0400D0B389 /* ViewController.swift in Sources */,
 				D0461B9826961F0400D0B389 /* AppDelegate.swift in Sources */,
+				9781D7B326A185B700EADE2E /* IntToHumModel.swift in Sources */,
 				D09FCA3F269622090033D7C0 /* IntToHumViewModel.swift in Sources */,
 				D0461B9A26961F0400D0B389 /* SceneDelegate.swift in Sources */,
 			);
@@ -442,7 +486,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8PTJPMLS7S;
-				INFOPLIST_FILE = IntegerToHumanReadable/Info.plist;
+				INFOPLIST_FILE = IntegerToHumanReadable/Common/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -461,7 +505,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8PTJPMLS7S;
-				INFOPLIST_FILE = IntegerToHumanReadable/Info.plist;
+				INFOPLIST_FILE = IntegerToHumanReadable/Common/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

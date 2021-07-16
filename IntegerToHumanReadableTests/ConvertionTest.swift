@@ -9,10 +9,10 @@ import XCTest
 @testable import IntegerToHumanReadable
 
 class ConvertionTest: XCTestCase {
-    var intHumViewModel : IntToHumViewModel!
+    var intHumViewModel : IntHumViewModel!
     override func setUp() {
         super.setUp()
-        intHumViewModel = IntToHumViewModel()
+        intHumViewModel = IntHumViewModel()
     }
     
     override func tearDown() {
@@ -21,7 +21,8 @@ class ConvertionTest: XCTestCase {
     }
     
     func testIsValidNumber() throws  {
-        XCTAssertNoThrow(try intHumViewModel.convert("99"))
+        intHumViewModel.numValue = "12"
+        XCTAssertNoThrow(try intHumViewModel.convert())
     }
 
 }

@@ -7,11 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController, intNumDelegate {
-   
+class ViewController: UIViewController {
     @IBOutlet weak var resultLab: UILabel!
     @IBOutlet weak var inputTextField: UITextField!
-    private var intHumViewModel : IntToHumViewModel!
+    private var viewModel :IntHumViewModel = IntHumViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let tap = UITapGestureRecognizer()
@@ -24,10 +24,9 @@ class ViewController: UIViewController, intNumDelegate {
     }
     
     @IBAction func convert(_ sender: UIButton) {
-        intHumViewModel = IntToHumViewModel()
-        intHumViewModel.delegate = self
         do {
-            try intHumViewModel.convert(inputTextField.text)
+            viewModel.numValue = inputTextField.text
+            self.resultLab.text = try viewModel.convert().capitalized
         } catch {
             present(error)
         }
